@@ -10,9 +10,25 @@ public class PracticeGame
         *It works pretty simply.If there are no options presented but a chunk of text has been provided, hit enter.
         *If there's options, you just type whatever the prompt asks. If there are multiple options, type whatever the option is word for word.
         Yep! With that out of the way, let's begin!*/
+
+        //stats!
+        int health = 20;
+        int charm = 0;
+        int strength = 0;
+        int prick = 0; //this stat is for if you're an asshole
+        int daring = 0;
+        int intellect = 0;
+        int
+
+        //items!
+        int woodenSword = 20;
+
+        //commands
+        //System.out.println("Your prick stat is" + prick);
+
         System.out.println("Instructions: If no options are presented and the prompt asks nothing, hit enter.");
         System.out.println("If no options are presented but the prompt asks something, answer the prompt.");
-        System.out.println("If options are presented, type the letter of your choice (they're case sensitive!). Options are case sensitive and require punctuation");
+        System.out.println("If options are presented, type the letter of your choice (they're case sensitive!). Options are case sensitive");
         keyboard.nextLine();
         System.out.println("You wake up to find yourself sitting on a bed in a messy, vine-ridden cottage. Warm soup sits on a table close by, next to a glass of milk. You see herbs strewn about a table across from your bed, alongside glowing viles and colorful elixirs. The cottage only has one room, but it isn't too cramped. You don't know where you are or how you got here, but you know that you've never been here before. You sit up and are immediatley greeted by a small, fairy like creature.");
         keyboard.nextLine();
@@ -38,6 +54,7 @@ public class PracticeGame
 
             if(purpose.equals("C"))
             {
+                charm ++;
                 System.out.println("");
                 System.out.println("Sprite: No way, " + name + ", we just met! At least take me out first.. a cute fairy like me isn't easy.");
                 keyboard.nextLine();
@@ -51,6 +68,7 @@ public class PracticeGame
             else if(purpose.equals("B"))
             {
                System.out.println("");
+                prick++;
                 System.out.println("Sprite: Hmph, no need to be snooty! If you won't tell me then I can't help you.");
                 System.out.println("");
                 System.out.println("Ask for help?" + "     A) Yes / B) No");
@@ -61,12 +79,16 @@ public class PracticeGame
 
             if (help.equals("A"))
             {
+                prick = prick - 1;
                 System.out.println("");
                 System.out.println("Sprite: Help? Sure thing! I'll take you to the village! That was the plan, anyways. Chief wanted a word with you himself.");
                 keyboard.nextLine();
             }
             else if(help.equals("B"))
             {
+                prick++;
+                System.out.println("");
+                System.out.println("Congrats! You've discovered your prick stat! This can only negatively affect you, so play nice!");
                 System.out.println("");
                 System.out.println("Sprite: I mean, if you don't want any help, I could just leave you here. I don't need to help you. I'll give you one last chance to accept my help.");
                 System.out.println("");
@@ -136,6 +158,9 @@ public class PracticeGame
                }
                else if(strangePotions.equals("B"))
                {
+                   intellect++;
+                   System.out.println("");
+                   System.out.println("Congrats! you've discovered your intellect stat! You get points for not being stupid.");
                    System.out.println("");
                    System.out.println("You decide the potions may not be a good idea this time around.");
                    keyboard.nextLine();
@@ -143,8 +168,17 @@ public class PracticeGame
             }
 
                 System.out.println("");
-                System.out.println("You decide you shouldn't keep Maybell waiting. You step out the door, and your adventure begins");
+                System.out.println("You decide you shouldn't keep Maybell waiting. You step out the door, and your adventure begins.");
                 keyboard.nextLine();
+                                              //choice!//
+                System.out.println("Now's a good time to check your stats!      A) show me!   /   B) I'm okay");
+                System.out.println("");
+                String shdjsj = keyboard.nextLine();
+                if (shdjsj.equals("A"))
+                {
+                    System.out.println("Your stats are health: " + health + "   strength: " + strength + "   intellect: " + intellect + "    daring: " + daring + "   prick: " + prick + ".");
+                }
+
                 System.out.println("As you're following Maybell through the forest, you can't help but admire the scenery. Fireflies mosey around and light up the path, tree sap fills the air with a sweet, tantalizing aroma, and you occasionally catch glimpses of exotic wildlife. You don't know where you're from, but wherever that is, its beauty cannot compare to this. ");
                 keyboard.nextLine();
                 System.out.println("Sprite: Hey... I'm sure this is a touchy subject, but don't you remember anything at all? Family? Friends? Your home?");
@@ -168,6 +202,7 @@ public class PracticeGame
                 }
                 else if (touchy.equals("C"))
                 {
+                    charm ++;
                     System.out.println("Sprite: Nice try " + name + ", but you'll have to try harder than that!");
                     keyboard.nextLine();
                 }
@@ -197,7 +232,7 @@ public class PracticeGame
                     keyboard.nextLine();
                 }
 
-                System.out.println("Good job, " + name + "! You've triggered your first battle worse than a reddit user with >10,000 karma!");
+                System.out.println("Good job, " + name + "! You've triggered your first battle worse than a redditor with >10,000 karma and discovered your strength stat! There are also secret stats, so play wisely!");
                 keyboard.nextLine();
                 System.out.println("Three goblins jump out from their hiding spots and surround you and Maybell! fight, or flee?");
                 System.out.println("");
@@ -210,6 +245,7 @@ public class PracticeGame
 
                 if(battleUno.equals("B"))
                 {
+                    strength = strength -1;
                     System.out.println("Yeah, nice try bud. You're surrounded. Don't be a soy boy.");
                     keyboard.nextLine();
                 }
