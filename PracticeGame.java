@@ -18,17 +18,15 @@ public class PracticeGame
         int prick = 0; //this stat is for if you're an asshole
         int daring = 0;
         int intellect = 0;
-        int
 
         //items!
         int woodenSword = 20;
-
         //commands
         //System.out.println("Your prick stat is" + prick);
 
         System.out.println("Instructions: If no options are presented and the prompt asks nothing, hit enter.");
         System.out.println("If no options are presented but the prompt asks something, answer the prompt.");
-        System.out.println("If options are presented, type the letter of your choice (they're case sensitive!). Options are case sensitive");
+        System.out.println("If options are presented, type the letter of your choice (they're not case sensitive!). Options are case sensitive");
         keyboard.nextLine();
         System.out.println("You wake up to find yourself sitting on a bed in a messy, vine-ridden cottage. Warm soup sits on a table close by, next to a glass of milk. You see herbs strewn about a table across from your bed, alongside glowing viles and colorful elixirs. The cottage only has one room, but it isn't too cramped. You don't know where you are or how you got here, but you know that you've never been here before. You sit up and are immediatley greeted by a small, fairy like creature.");
         keyboard.nextLine();
@@ -52,20 +50,20 @@ public class PracticeGame
 
                                                  // First Choice! //
 
-            if(purpose.equals("C"))
+            if(purpose.equals("C"||"c"))
             {
                 charm ++;
                 System.out.println("");
                 System.out.println("Sprite: No way, " + name + ", we just met! At least take me out first.. a cute fairy like me isn't easy.");
                 keyboard.nextLine();
             }
-            else if(purpose.equals("A"))
+            else if(purpose.equals("A" || "a"))
             {
                 System.out.println("");
                 System.out.println("Sprite: Oh.. well, that's not good. I promised the chief I'd figure out what the heck a human was doing here! I guess we'll have to figure something out then. I'll take you to see the chief! He asked for you anyways.");
                 keyboard.nextLine();
             }
-            else if(purpose.equals("B"))
+            else if(purpose.equals("B" || "b"))
             {
                System.out.println("");
                 prick++;
@@ -77,14 +75,14 @@ public class PracticeGame
 
                                                 // Second choice! //
 
-            if (help.equals("A"))
+            if (help.equals("A" || "a"))
             {
                 prick = prick - 1;
                 System.out.println("");
                 System.out.println("Sprite: Help? Sure thing! I'll take you to the village! That was the plan, anyways. Chief wanted a word with you himself.");
                 keyboard.nextLine();
             }
-            else if(help.equals("B"))
+            else if(help.equals("B"||"b"))
             {
                 prick++;
                 System.out.println("");
@@ -98,13 +96,13 @@ public class PracticeGame
                                                 // Third choice! //
 
                 String helpTwo = keyboard.nextLine();
-                    if (helpTwo.equals("A"))
+                    if (helpTwo.equals("A" || "a"))
                     {
                         System.out.println("");
                         System.out.println("Sprite: Alright... you were really close to losing there, bucko. I just want to help you.");
                         keyboard.nextLine();
                     }
-                    else if(helpTwo.equals("B"))
+                    else if(helpTwo.equals("B" || "b"))
                     {
                         System.out.println("");
                         System.out.println("Sprite: Alright then...");
@@ -138,7 +136,7 @@ public class PracticeGame
 
                                                 // Fourth Choice! //
 
-                if (begPath.equals("B"))
+                if (begPath.equals("B" || "b"))
             {
                 System.out.println("");
                 System.out.println("There isn't much to do in here. Although, you have been eyeing those weird potions since you first came too... try one?");
@@ -149,14 +147,14 @@ public class PracticeGame
 
                                                 // Fifth Choice! //
 
-                if (strangePotions.equals("A"))
+                if (strangePotions.equals("A" || "a"))
             {
                 System.out.println("");
                 System.out.println ("You pick up a glowing potion and drink it. You immediatley drop to the floor and begin writhing helplessly as the world fades to black. Man, if this fariy is supposed to heal people then what just happened? Talk about irnoy. What did you expect, a pair of wings? Game over.");
                 keyboard.close();
                 System.exit(1);
                }
-               else if(strangePotions.equals("B"))
+               else if(strangePotions.equals("B" || "b"))
                {
                    intellect++;
                    System.out.println("");
@@ -174,9 +172,10 @@ public class PracticeGame
                 System.out.println("Now's a good time to check your stats!      A) show me!   /   B) I'm okay");
                 System.out.println("");
                 String shdjsj = keyboard.nextLine();
-                if (shdjsj.equals("A"))
+                if (shdjsj.equals("A" || "a"))
                 {
                     System.out.println("Your stats are health: " + health + "   strength: " + strength + "   intellect: " + intellect + "    daring: " + daring + "   prick: " + prick + ".");
+                    keyboard.nextLine();
                 }
 
                 System.out.println("As you're following Maybell through the forest, you can't help but admire the scenery. Fireflies mosey around and light up the path, tree sap fills the air with a sweet, tantalizing aroma, and you occasionally catch glimpses of exotic wildlife. You don't know where you're from, but wherever that is, its beauty cannot compare to this. ");
@@ -190,17 +189,17 @@ public class PracticeGame
 
                                                     // Sixth Choice! //
 
-                if(touchy.equals("A"))
+                if(touchy.equals("A" || "a"))
                 {
                     System.out.println("Sprite: Oh man, that's tough. Well, the village Oracle could possibly help recover them! It's always worth a shot. Besides, it'd at least be nice for you to meet her. We'll pay her a visit when we get there!");
                     keyboard.nextLine();
                 }
-                else if(touchy.equals("B"))
+                else if(touchy.equals("B"||"b"))
                 {
                     System.out.println("Sprite: Yeah, I get it. Sorry I asked... Well, it may be in your best interest to pay the oracle a visit to help you sort things out if you've got any issues.");
                     keyboard.nextLine();
                 }
-                else if (touchy.equals("C"))
+                else if (touchy.equals("C"||"c"))
                 {
                     charm ++;
                     System.out.println("Sprite: Nice try " + name + ", but you'll have to try harder than that!");
@@ -219,13 +218,13 @@ public class PracticeGame
 
                                                 // Seventh Choice! //
 
-                if(trapUno.equals("B"))
+                if(trapUno.equals("B"||"b"))
                 {
                     System.out.println("");
                     System.out.println("You decided to stay put! Maybell heard the trap go off and silently zipped over to help you out of it! Unfortunately, her faint glow was just bright enough to be spotted by attackers!");
                     keyboard.nextLine();
                 }
-                else if (trapUno.equals("A"))
+                else if (trapUno.equals("A"||"a"))
                 {
                     System.out.println("");
                     System.out.println("You decide to yell! Maybell hears you and flies over as soon as she possibly can! Unfortunately, your yell alerted attackers that their trap worked!");
@@ -243,7 +242,7 @@ public class PracticeGame
 
                                                 // Eighth Choice! //
 
-                if(battleUno.equals("B"))
+                if(battleUno.equals("B"||"b"))
                 {
                     strength = strength -1;
                     System.out.println("Yeah, nice try bud. You're surrounded. Don't be a soy boy.");
@@ -266,6 +265,16 @@ public class PracticeGame
                 System.out.println("Sprite: Geeze " + name + ", that was scary! I'm glad those goblins were foolish enough to fall for that. I know I'm supposed to care for all creatures, but goblins just give me the heebie jeebies! I wonder why they decided to attack... this can't be any good.");
                 keyboard.nextLine();
                 System.out.println("You arrive in the village. It appears there's a festival going on!");
+                System.out.println("");
+                System.out.println("Where would you like to go?");
+                System.out.println("A) carnival booth");
+                String festivalBooth = keyboard.nextLine();
+                if (festivalBooth.equals("A"||"a"))
+                {
+                    System.out.println("");
+                    System.out.println("You point excitedly at the canival booths, looking at Maybell for permission.");
+
+                }
+
+
                 System.out.println("That's all I've got written so far! Thanks for playing!");
-    }
-}
