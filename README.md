@@ -1,5 +1,5 @@
 # Practice-Game
-Just for my shitty text based game
+Just for my shitty text based game.
 This is just a practice game with no real literary or entertainment value.
 I'm just screwing around with coding, but maybe I can do something fun with this eventually! So yeah.
 It works pretty simply. If there are no options presented but a chunk of text has been provided, hit enter.
